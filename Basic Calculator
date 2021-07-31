@@ -1,0 +1,34 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+public static void main(String[] args) {
+//	Question  Calculator Program in Java
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Two Number");
+    double FirstNumber  = sc.nextDouble();
+    double SecondNumber = sc.nextDouble();
+    System.out.print("Enter an Operator  (+ , - , * , / ) :");
+    char Operator = sc.next().charAt(0);
+    double result;
+    switch (Operator) {
+        case '+':
+            result = FirstNumber + SecondNumber;
+            break;
+        case '-':
+            result = FirstNumber - SecondNumber;
+            break;
+        case '*':
+            result = FirstNumber * SecondNumber;
+            break;
+        case '/':
+            result = FirstNumber / SecondNumber;
+            break;
+        default:
+            System.out.println("Error!,Please Enter Right Operator.");
+            return;
+    }
+    System.out.printf("%.1f %c %.1f = %.1f" , FirstNumber,Operator,SecondNumber,result);
+    }
+    }
